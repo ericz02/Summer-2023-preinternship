@@ -39,29 +39,29 @@ Daily Schedule (Subject To Change!)
 
 #### Week 1
 
-| Day                           | Description                                                                  | Links |
-| ----------------------------- | ---------------------------------------------------------------------------- | ----- |
-| **Day 1** - Monday 6/12/23    | Hackerrank assessment & Growth Mindset Discussion                            |       |
-| **Day 2** - Tuesday 6/13/23   | [Intro to HTML/CSS, Bootstrap, Flexbox & Grid](./day02-intro-to-html/README.md)                                 |  [index.html](./day02-intro-to-html/index.html), [styles.css](./day02-intro-to-html/styles.css)     |
-| **Day 3** - Wednesday 6/14/23 | [Intro to Git & GitHub](./day03-intro-to-git-and-github/README.md)                                                        |   [ChatGPT README Generator Prompt](./day03-intro-to-git-and-github/README_GENERATOR_PROMPT.md), [Job App Tracker Repo](https://github.com/DakotaLMartinez/job-app-tracker)    |
-| **Day 4** - Thursday 6/15/23  | [Intro to JavaScript](./day04-intro-to-javascript/README.md)                                                          |       |
-| **Day 5** - Friday 6/16/23    | Intro to Technical Resume Building, 1-on-1 Coaching Preferences and Schedule |       |
+| Day                           | Description                                                                     | Links                                                                                                                                                                     |
+| ----------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Day 1** - Monday 6/12/23    | Hackerrank assessment & Growth Mindset Discussion                               |                                                                                                                                                                           |
+| **Day 2** - Tuesday 6/13/23   | [Intro to HTML/CSS, Bootstrap, Flexbox & Grid](./day02-intro-to-html/README.md) | [index.html](./day02-intro-to-html/index.html), [styles.css](./day02-intro-to-html/styles.css)                                                                            |
+| **Day 3** - Wednesday 6/14/23 | [Intro to Git & GitHub](./day03-intro-to-git-and-github/README.md)              | [ChatGPT README Generator Prompt](./day03-intro-to-git-and-github/README_GENERATOR_PROMPT.md), [Job App Tracker Repo](https://github.com/DakotaLMartinez/job-app-tracker) |
+| **Day 4** - Thursday 6/15/23  | [Intro to JavaScript](./day04-intro-to-javascript/README.md)                    | [Solution Code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/compare/main...04_solution)                                                         |
+| **Day 5** - Friday 6/16/23    | Intro to Technical Resume Building, 1-on-1 Coaching Preferences and Schedule    |                                                                                                                                                                           |
 
 #### Week 2
 
-| Day                           | Description                                    | Links |
-| ----------------------------- | ---------------------------------------------- | ----- |
-| Monday 6/19/23                | Juneteenth                                     |       |
-| **Day 6** - Tuesday 6/20/23   | [Using JavaScript for Algorithms & Unit Testing](./day06-algorithms-and-unit-testing-in-js/README.md) |       |
-| **Day 7** - Wednesday 6/21/23 | Cover Letters & Email Communication            |       |
-| **Day 8** - Thursday 6/22/23  | DOM Manipulation                               |       |
-| **Day 9** - Friday 6/23/23    | Intro to React                                 |       |
+| Day                           | Description                                                                                           | Links                                                                                                               |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Monday 6/19/23                | Juneteenth                                                                                            |                                                                                                                     |
+| **Day 6** - Tuesday 6/20/23   | [Using JavaScript for Algorithms & Unit Testing](./day06-algorithms-and-unit-testing-in-js/README.md) | [Solution code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/compare/06_solution?expand=1) |
+| **Day 7** - Wednesday 6/21/23 | [DOM Manipulation](./day07-dom-manipulation/README.md)                                                                                      |      [Solution Code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/commit/3646ee6b7093d45bcba7d12cafa71c02bdc2d354)      |
+| **Day 8** - Thursday 6/22/23  | [Intro to React](./day08-intro-to-react/README.md)                                                                                        |    [Solution Code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/commit/e2a837c1784702c6a7d72c4db27d700d044577d2)                                                                                                                 |
+| **Day 9** - Friday 6/23/23    | Cover Letters & Email Communication + [React & Tailwind mini lesson](./day09-react-and-tailwind-mini-lecture/README.md)                                                             |      [Solution Code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/compare/main...09_solution?expand=1)         |
 
 #### Week 3
 
 | Day                            | Description                                                               | Links |
 | ------------------------------ | ------------------------------------------------------------------------- | ----- |
-| **Day 10** - Monday 6/26/23    | React - State & Events                                                    |       |
+| **Day 10** - Monday 6/26/23    | [React - State & Events](./day10-react-state-and-events/README.md)                                                    |  [Solution Code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/tree/10_solution)     |
 | **Day 11** - Tuesday 6/27/23   | React - Forms & Lifting State                                             |       |
 | **Day 12** - Wednesday 6/28/23 | React - Side Effects & Data Fetching (Create & Read)                      |       |
 | **Day 13** - Thursday 6/29/23  | React Router and Client-Side Routing in a SPA                             |       |
@@ -155,14 +155,14 @@ Daily Schedule (Subject To Change!)
 - [Blackboard/ Onboarding](https://bbhosted.cuny.edu/webapps/blackboard/content/listContent.jsp?content_id=_75836936_1&course_id=_2267876_1&mode=reset)
 
 **Day 2: [Introduction to HTML/CSS, Bootstrap, Flexbox & Grid (06/13/23)](./day02-intro-to-html/README.md)**
+
 ### Resources
+
 - [Interactive box-model Demo](https://codepen.io/psande/full/nKOJyX)
 - [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 - [CSS Grid Crash Course](https://www.youtube.com/watch?v=p4Ith5qRM1g)
 - [CSS Flexbox Crash Course](https://www.youtube.com/watch?v=z62f2k38s64)
 - [Build a Tribute Page](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-tribute-page)
-
-
 
 **Day 3: [Intro to Git & GitHub](./day03-intro-to-git-and-github/README.md), Git/Github/Collaborative Software Development (Pair Programming) (06/14/23)**
 
@@ -175,7 +175,7 @@ Daily Schedule (Subject To Change!)
 
 **Day 4: Intro to JavaScript (06/15/23)**
 
-#### Extra Resources ####
+#### Extra Resources
 
 - [JS Data Types & Variables](https://frontend.turing.edu/lessons/module-1/js-data-types-and-variables.html)
 
@@ -206,7 +206,42 @@ Other resources:
 **Day 6: Using JavaScript for Algorithms & Unit Testing (06/20/23)**
 
 Resources:
+
 - [Introduction to Algorithms](https://www.geeksforgeeks.org/introduction-to-algorithms/)
 - [Introduction to Unit Testing](https://www.guru99.com/unit-testing-guide.html)
 - [Jest - Getting Started](https://jestjs.io/docs/getting-started)
 - [Jest Tutorial: what is Jest?](https://www.valentinog.com/blog/jest/)
+
+**Day 7: DOM Manipulation (06/21/23)**
+
+Video Resources:
+
+- [An Introduction to the DOM (Document Object Model) in JavaScript (6 minute video)](https://www.youtube.com/watch?v=l-0nPnSvbX8)
+- [Traversing the DOM with JavaScript (12.5 minute video)](https://www.youtube.com/watch?v=8LWQNnVAMh4)
+- [An Introduction to DOM Events with JavaScript (31 minute youtube video)](https://www.youtube.com/watch?v=QE1YQnhntgw)
+
+Written Resources:
+- [Eloquent Javascript Chapter 13: Javascript and the Browser](http://eloquentjavascript.net/13_browser.html)
+
+- [Eloquent Javascript Chapter 14: The Document Object Model](http://eloquentjavascript.net/14_dom.html)
+
+- [Eloquent Javascript Chapter 15: Handling Events](http://eloquentjavascript.net/15_event.html)
+
+Slides:
+
+- [A Series of DOM Slides](https://www.teaching-materials.org/jsweb/slides/dom#/)
+
+- [DOM lecture slides](https://docs.google.com/presentation/d/1MWE-AoSTGIQsk1-4UkLwlWwy-ns6VSbECK3fLIEL8LQ/edit?usp=sharing)
+
+- [DOM Manipulation Slides](https://raw.githack.com/learn-co-curriculum/SENG-LIVE-013023-Phase-1-JS/main/02_DOM_Manipulation/assets/export/index.html)
+
+- [DOM Events Slides](https://raw.githack.com/learn-co-curriculum/SENG-LIVE-013023-Phase-1-JS/main/03_DOM_Events/assets/export/index.html)
+
+**Day 8: Intro to React (06/22/23)**
+
+Suggested Pre-reading:
+- [React: Quick Start](https://react.dev/learn)
+- [React: Developer Tools](https://react.dev/learn/react-developer-tools)
+- [React: Describing the UI](https://react.dev/learn/describing-the-ui)
+- [React: Your First Component](https://react.dev/learn/your-first-component)
+- [React: Importing and Exporting Components](https://react.dev/learn/importing-and-exporting-components)
