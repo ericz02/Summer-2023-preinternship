@@ -55,7 +55,6 @@ function App() {
     e.preventDefault();
   }
   
-
   return (
     <div className="mx-auto max-w-4xl">
       <h1>Job Application Tracker</h1>
@@ -88,9 +87,18 @@ function App() {
               className="bg-white border-4 focus:outline-none"
             />
           </fieldset>
+          <fieldset className="flex flex-col">
+            <label htmlFor="company">Company</label>
+            <input 
+              type="text" 
+              name="company" 
+              id="company"
+              className="bg-white border-4 focus:outline-none"
+            />
+          </fieldset>
         </form>
       </Modal>
-    </div>
+    </div>  
   );
 }
 
