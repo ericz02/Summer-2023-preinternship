@@ -71,6 +71,17 @@
       "lastContactDate": null,
       "companyContact": null,
       "status": 2
+    },
+    {
+      "title": "Frontend Software Engineer, Creator",
+      "company": "Tiktok",
+      "location": "San Jose, CA",
+      "minSalary": 136800,
+      "maxSalary": 205000,
+      "postDate": "2023-06-23",
+      "jobPostURL": "https://www.linkedin.com/jobs/view/3556300864",
+      "status": 1,
+      "id": 5
     }
   ]
 }
