@@ -1,6 +1,15 @@
 function cyclicSort(nums) {
-  
+  let i = 0;
+  while (i < nums.length) {
+    const correctIndex = nums[i] - 1;
+    if (i !== correctIndex) {
+      [nums[i], nums[correctIndex]] = [nums[correctIndex], nums[i]];  // swap
+    } 
+    i++;
+  }
+  return nums;
 }
+
 
 /*----------------------------------------------------------------
 i = 0, arr[i] is 5 which should be at index 4 so swap values at i(0) and 4
