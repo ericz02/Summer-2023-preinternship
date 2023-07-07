@@ -6,7 +6,17 @@ class Node {
 }
 
 function hasCycle(head) {
-  
+  let fast = head;
+  let slow = head;
+  while (fast !== null && fast.next !== null) {
+    slow = slow.next; // move one step
+    fast = fast.next.next; // move two steps
+    if (slow === fast) { // found the cycle
+      return true;
+    }
+  }
+  return false;
+
 }
 
 module.exports = {
