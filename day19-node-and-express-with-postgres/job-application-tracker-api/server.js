@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const port = 4000;
 const jobs = require("./jobs");
-const { query } = require('./database');
+const { query } = require("./database");
 require("dotenv").config();
 
 app.use((req, res, next) => {
@@ -12,6 +12,7 @@ app.use((req, res, next) => {
   });
   next();
 });
+
 app.use(express.json());
 
 function getNextIdFromCollection(collection) {
@@ -25,18 +26,31 @@ app.get("/", (req, res) => {
 });
 
 // Get all the jobs
-app.get("/jobs", (req, res) => {
-  res.send(jobs);
+app.get("/jobs", async (req, res) => {
+  try {
+    const allJobs = await query("SELECT * FROM job_applications");
+
+    res.status(200).json(allJobs.rows);
+  } catch (err) {
+    console.error(err);
+  }
 });
 
 // Get a specific job
-app.get("/jobs/:id", (req, res) => {
+app.get("/jobs/:id", async (req, res) => {
   const jobId = parseInt(req.params.id, 10);
-  const job = jobs.find((j) => j.id === jobId);
-  if (job) {
-    res.send(job);
-  } else {
-    res.status(404).send({ message: "Job not found" });
+
+  try {
+    const job = await query("SELECT * FROM job_applications WHERE id = $1", [jobId]);
+
+    if (job.rows.length > 0) {
+      res.status(200).json(job.rows[0]);
+    } else {
+      res.status(404).send({ message: "Job not found" });
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Internal server error" });
   }
 });
 
@@ -81,32 +95,60 @@ app.post("/jobs", async (req, res) => {
 });
 
 // Update a specific job
-app.patch("/jobs/:id", (req, res) => {
+app.patch("/jobs/:id", async (req, res) => {
   const jobId = parseInt(req.params.id, 10);
-  const jobUpdates = req.body;
-  const jobIndex = jobs.findIndex((job) => job.id === jobId);
-  if (jobIndex !== -1) {
-    const originalJob = jobs[jobIndex];
-    const updatedJob = {
-      ...originalJob,
-      ...jobUpdates,
-    };
-    jobs[jobIndex] = updatedJob;
-    res.send(updatedJob);
-  } else {
-    res.status(404).send({ message: "Job not found" });
+
+  const fieldNames = [
+    "company",
+    "title",
+    "minSalary",
+    "maxSalary",
+    "location",
+    "postDate",
+    "jobPostUrl",
+    "applicationDate",
+    "lastContactDate",
+    "companyContact",
+    "status",
+    "jobId",
+  ].filter((name) => req.body[name]);
+
+  let updatedValues = fieldNames.map(name => req.body[name]);
+  const setValuesSQL = fieldNames.map((name, i) => {
+    return `${name} = $${i + 1}`
+  }).join(', ');
+
+  try {
+    const updatedJob = await query(
+      `UPDATE job_applications SET ${setValuesSQL} WHERE id = $${fieldNames.length+1} RETURNING *`,
+      [...updatedValues, jobId]
+    );
+
+    if (updatedJob.rows.length > 0) {
+      res.status(200).json(updatedJob.rows[0]);
+    } else {
+      res.status(404).send({ message: "Job not found" });
+    }
+  } catch (err) {
+    res.status(500).send({ message: err.message });
+    console.error(err);
   }
 });
 
 // Delete a specific job
-app.delete("/jobs/:id", (req, res) => {
+app.delete("/jobs/:id", async (req, res) => {
   const jobId = parseInt(req.params.id, 10);
-  const jobIndex = jobs.findIndex((job) => job.id === jobId);
-  if (jobIndex !== -1) {
-    jobs.splice(jobIndex, 1);
-    res.send({ message: "Job deleted successfully" });
-  } else {
-    res.status(404).send({ message: "Job not found" });
+
+  try {
+    const deleteOp = await query("DELETE FROM job_applications WHERE id = $1", [jobId]);
+
+    if (deleteOp.rowCount > 0) {
+      res.status(200).send({ message: "Job deleted successfully" });
+    } else {
+      res.status(404).send({ message: "Job not found" });
+    }
+  } catch (err) {
+    console.error(err);
   }
 });
 
