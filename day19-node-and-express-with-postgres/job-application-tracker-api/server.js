@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const port = 4000;
 const jobs = require("./jobs");
+const { query } = require('./database');
 require("dotenv").config();
 
 app.use((req, res, next) => {
@@ -40,14 +41,43 @@ app.get("/jobs/:id", (req, res) => {
 });
 
 // Create a new job
-app.post("/jobs", (req, res) => {
-  const newJob = {
-    ...req.body,
-    id: getNextIdFromCollection(jobs),
-  };
-  jobs.push(newJob);
-  console.log("newJob", newJob);
-  res.status(201).send(newJob);
+app.post("/jobs", async (req, res) => {
+  const {
+    company,
+    title,
+    minSalary,
+    maxSalary,
+    location,
+    postDate,
+    jobPostUrl,
+    applicationDate,
+    lastContactDate,
+    companyContact,
+    status,
+  } = req.body;
+
+  try {
+    const newJob = await query(
+      `INSERT INTO job_applications (company, title, minSalary, maxSalary, location, postDate, jobPostUrl, applicationDate, lastContactDate, companyContact, status) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING *`,
+      [
+        company,
+        title,
+        minSalary,
+        maxSalary,
+        location,
+        postDate,
+        jobPostUrl,
+        applicationDate,
+        lastContactDate,
+        companyContact,
+        status,
+      ]
+    );
+
+    res.status(201).json(newJob.rows[0]);
+  } catch (err) {
+    console.error(err);
+  }
 });
 
 // Update a specific job
