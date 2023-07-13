@@ -7,8 +7,12 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
+    // models/job_application.js
     static associate(models) {
-      // define association here
+      this.belongsTo(models.User);
+      this.belongsToMany(models.Tag, {
+        through: 'JobApplicationTag'
+      });
     }
   }
   JobApplication.init(
