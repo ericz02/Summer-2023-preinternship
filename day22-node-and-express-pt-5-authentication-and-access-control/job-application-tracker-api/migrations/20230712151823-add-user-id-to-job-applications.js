@@ -1,3 +1,4 @@
+// migration to add UserId
 "use strict";
 
 /** @type {import('sequelize-cli').Migration} */
